@@ -13,7 +13,7 @@ $(NAME):$(obj)
 	$(CC) $(CFLAGS) $(obj) -o $(NAME)
 
 $(OBJ_F)/%.o: %.cpp
-	mkdir -p $(OBJ_F)
+	@mkdir -p $(OBJ_F)
 	$(CC) $(CFLAGS) -c $< -o $@ 
 
 clean:

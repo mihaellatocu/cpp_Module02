@@ -24,7 +24,7 @@ public:
     float toFloat(void)const; //conversie to float
     int toInt(void) const; //conversie la intreg
 
-     ~Fixed();
+    ~Fixed();
 
     int operator<(const Fixed& other) const;
     int operator>(const Fixed& other) const;
@@ -42,6 +42,11 @@ public:
     Fixed& operator--(void);
     Fixed  operator++(int);
     Fixed  operator--(int);
+
+    static Fixed& max(Fixed& a, Fixed& b);
+    static const Fixed& max(const Fixed& a, const Fixed& b);
+    static Fixed& min(Fixed& a, Fixed& b);
+    static const Fixed& min(const Fixed& a, const Fixed& b);
 
 };
 
