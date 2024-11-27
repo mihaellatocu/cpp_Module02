@@ -6,16 +6,16 @@ Fixed::Fixed()
     x = 0;
 }
 // *!conversie la INT
-Fixed::Fixed(const int number) //normall constr
+Fixed::Fixed(const int number) //normal constr
 {
     std::cout << "Int constructor called \n";
-    x = number << fractionalBits;
+    x = number << fractionalBits; // 00000101 << 3 = 00101000 = 2^5 + 2^3 = 40
 }
 
 Fixed::Fixed(const float number) // float to fixed
 {
     std::cout << "Float constructor  called \n";
-    x = roundf(number * (1 << fractionalBits));
+    x = roundf(number * (1 << fractionalBits));// number*(1 << 8) = number * (1 * 2^8)
 }
 
 Fixed::Fixed(const Fixed& other) //copy constr
